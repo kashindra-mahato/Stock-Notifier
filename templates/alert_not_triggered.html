@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alert Not Triggered</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+  </head>
+  <body>
+    <h1>Alert Not Triggered</h1>
+    <p>The current price for {{ ticker }} has not crossed the threshold of {{ threshold }}.</p>
+    <p>Current price: {{ current_price }}</p>
+    <h1>{{ stock_data['longName'] }}</h1>
+
+        <h2>Overview</h2>
+        <p>Exchange: {{ stock_data['exchange'] }}</p>
+        <p>Country: {{ stock_data['country'] }}</p>
+        <p>Website: {{ stock_data['website'] }}</p>
+
+        <h2>Financials</h2>
+        <p>Financial Currency: {{ stock_data['financialCurrency'] }}</p>
+        <p>Total Revenue: {{ stock_data['totalRevenue'] }}</p>
+        <p>Total Assets: {{ stock_data['totalAssets'] }}</p>
+        <p>Total Debt: {{ stock_data['totalDebt'] }}</p>
+        <p>Total Cash: {{ stock_data['totalCash'] }}</p>
+        <p>Total Cash per Share: {{ stock_data['totalCashPerShare'] }}</p>
+        <p>Total Revenue per Share: {{ stock_data['revenuePerShare'] }}</p>
+
+
+        <h2>Ratios</h2>
+        <p>Current Ratio: {{ stock_data['currentRatio'] }}</p>
+        <p>Quick Ratio: {{ stock_data['quickRatio'] }}</p>
+        <p>Debt to Equity: {{ stock_data['debtToEquity'] }}</p>
+        <p>Return on Assets: {{ stock_data['returnOnAssets'] }}</p>
+        <p>Return on Equity: {{ stock_data['returnOnEquity'] }}</p>
+
+        <h2>Growth</h2>
+        <p>Revenue Growth: {{ stock_data['revenueGrowth'] }}</p>
+        <p>Earnings Growth: {{ stock_data['earningsGrowth'] }}</p>
+
+        <h2>Recommendations</h2>
+        <p>Number of Analyst Opinions: {{ stock_data['numberOfAnalystOpinions'] }}</p>
+        <p>Recommendation Key: {{ stock_data['recommendationKey'] }}</p>
+        <p>Recommendation Mean: {{ stock_data['recommendationMean'] }}</p>
+
+        <h2>Targets</h2>
+        <p>Target Low Price: {{ stock_data['targetLowPrice'] }}</p>
+        <p>Target Median Price: {{ stock_data['targetMedianPrice'] }}</p>
+        <p>Target Mean Price: {{ stock_data['targetMeanPrice'] }}</p>
+        <p>Target High Price: {{ stock_data['targetHighPrice'] }}</p>
+
+        <h2>Company Information</h2>
+        <p>Sector: {{ stock_data['sector'] }}</p>
+        <p>Industry: {{ stock_data['industry'] }}</p>
+        <p>Full-Time Employees: {{ stock_data['fullTimeEmployees'] }}</p>
+        <p>Long Business Summary: {{ stock_data['longBusinessSummary'] }}</p>
+
+  </body>
+</html>

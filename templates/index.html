@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stock Alert App</title>
+    <script src="/static/scripts/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Stock Alert App</h1>
+        
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h2></h2>
+        <form action="/send-alert" method="post">
+            <label for="ticker">Stock Ticker:</label><br>
+            <input type="text" id="ticker" name="ticker" required><br>
+            <label for="threshold">Price Threshold:</label><br>
+            <input type="number" id="threshold" name="threshold" min="0" required><br>
+            <label for="frequency">Check Frequency:</label><br>
+            <select id="frequency" name="frequency">
+              <option value="hourly">Hourly</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select><br><br>
+            <label for="notification_type">Notification Type:</label><br>
+            <input type="radio" id="email" name="notification_type" value="email" onclick="showEmailInput()">
+            <label for="email">Email</label><br>
+            <input type="radio" id="text" name="notification_type" value="text" onclick="showPhoneInput()">
+            <label for="text">Text Message</label><br>
+            
+            <div id="email_input" style="display:none;">
+              <label for="email_address">Email Address:</label><br>
+              <input type="text" id="email_address" name="email_address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br><br>
+            </div>
+            
+            
+            <div id="phone_input" style="display:none;">
+              <label for="phone_number">Phone Number:</label><br>
+              <input type="text" id="phone_number" name="phone_number" pattern="\+977[0-9]{10}" title="Please enter a valid phone number starting with +977 and containing 10 digits" value="+977"><br>
+            </div>
+            
+            <input type="submit" value="Submit">
+            
+          </form>           
+      </div>
+    </main>
+    <footer>
+      
+    </footer>
+  </body>
+</html>
