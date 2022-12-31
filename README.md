@@ -4,7 +4,7 @@
 This web application allows users to receive notifications when the price of a given stock reaches a certain threshold. Users can specify the stock ticker symbol, the price threshold, the frequency at which the stock's price should be checked, and the type of notification they would like to receive.
 
 Prerequisites
-Before you can use this application, you will need to install the following software on your machine:
+Before you can use this application, you will need to install the following on your machine:
 
 - Python 3
 - Flask
