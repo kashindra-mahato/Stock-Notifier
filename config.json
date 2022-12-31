@@ -1,0 +1,14 @@
+{
+    "email": {
+      "server": "smtp.gmail.com",
+      "port": 587,
+      "username": "",
+      "password": ""
+    },
+    "twilio": {
+      "account_sid": "",
+      "auth_token": "",
+      "phone_number": ""
+    }
+  }
+  
